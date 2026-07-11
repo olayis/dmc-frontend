@@ -34,11 +34,11 @@ app.post("/api/ask", async (req, res) => {
     }
 
     const data = await response.json();
-    const text = data.candidates?.[0]?.parts?.[0]?.text ?? "";
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
     res.json({ text });
   } catch (err) {
     console.error("/api/ask failed:", err);
-    res.status(500).json({ error: "Model call failed" });
+    res.status(500).json({ error: "Something went wrong" });
   }
 });
 
