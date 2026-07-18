@@ -51,7 +51,7 @@ export default function App() {
   const buttonLabel = buttonLabels[status] ?? "Ask";
 
   return (
-    <main style={{ maxWidth: 1024, margin: "40px auto", fontFamily: "system-ui" }}>
+    <main style={{ maxWidth: 1024, margin: "40px auto", fontFamily: "system-ui", padding: 16 }}>
       <h1>Ask Anything</h1>
       <form onSubmit={ask}>
         <textarea
